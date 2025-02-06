@@ -1,0 +1,453 @@
+/* 
+ Primary Colors:
+
+🔵 Electric Blue (#007BFF) – for active buttons and highlights
+🔴 Crimson Red (#DC3545) – for losing states or warnings
+🟢 Neon Green (#28A745) – for winning states
+
+🎨 Secondary Colors:
+
+⚪ Soft Gray (#F8F9FA) – for background or neutral elements
+⚫ Charcoal Black (#212529) – for text and borders
+🟡 Gold Yellow (#FFC107) – for tie states or special effect
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+#body {
+  color: #212529;
+  background-color: #f8f9fa;
+}
+.header {
+  color: 00;
+}
+.title {
+  font-size: 54px;
+  color: #007bff;
+  text-align: center;
+  margin-top: 25px;
+}
+.btn {
+  background-color: #007bff;
+  color: #212539;
+  border-radius: 12px;
+}
+.start {
+  display: block;
+  width: 33.33%;
+  font-size: 36px;
+  margin-left: 33.33%;
+  margin-top: 20%;
+  padding: 20px 40px;
+  cursor: pointer;
+  border: none;
+}
+.start:hover,
+.start:active {
+  background-color: #f8f9fa;
+  color: #28a745;
+  border: solid 1px #28a745;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+.rules_container {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10%;
+  border: solid 1px #28a745;
+  border-radius: 12px;
+  padding: 10px 24px;
+}
+.rules {
+  font-size: 36px;
+  text-align: center;
+  color: #28a745;
+  padding: 10px 0;
+}
+.rules-list {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rule-list {
+  font-size: 24px;
+  color: #212539;
+  list-style: decimal;
+}
+.proceed {
+  display: block;
+  text-align: center;
+  width: 33.33%;
+  font-size: 24px;
+  margin-left: 33.33%;
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+}
+.proceed:hover,
+.proceed:active {
+  background-color: #f8f9fa;
+  color: #28a745;
+  border: solid 1px #28a745;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
+}
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: solid 1px #28a745;
+  border-radius: 12px;
+  margin-left: 33%;
+  margin-top: 10%;
+  padding: 20px 40px;
+  width: 33%;
+}
+.setting {
+  list-style-type: decimal;
+  text-align: left;
+}
+.setting,
+.setting select,
+.setting input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28px;
+}
+
+#begin {
+  display: block;
+  width: auto;
+  text-align: center;
+  font-size: 36px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+}
+#begin:hover,
+#begin:active {
+  background-color: #f8f9fa;
+  color: #28a745;
+  border: solid 1px #28a745;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
+}
+.scorecard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.round {
+  font-size: 48px;
+  color: #ffc107;
+}
+.board {
+  font-size: 48px;
+  color: #dc3545;
+  background-color: #ffc107;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+.score {
+  background-color: #28a745;
+  padding: 5px;
+  font-size: 32px;
+  border-radius: 8px;
+}
+.pick {
+  text-align: center;
+  color: #28a745;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.objects {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  text-align: center;
+  margin-left: 36%;
+}
+.object {
+  list-style: none;
+  font-size: 48px;
+  text-align: center;
+}
+#rock,
+#paper,
+#scissors {
+  font-size: 48px;
+  cursor: pointer;
+}
+.round-number-light {
+  color: #ffc107;
+} */
+
+/* 
+ Primary Colors:
+
+🔵 Electric Blue (#007BFF) – for active buttons and highlights
+🔴 Crimson Red (#DC3545) – for losing states or warnings
+🟢 Neon Green (#28A745) – for winning states
+
+🎨 Secondary Colors:
+
+⚪ Soft Gray (#F8F9FA) – for background or neutral elements
+⚫ Charcoal Black (#212529) – for text and borders
+🟡 Gold Yellow (#FFC107) – for tie states or special effect
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#body {
+  color: #212529;
+  background-color: #f8f9fa;
+}
+
+.header {
+  color: #000000; /* Fixed typo */
+}
+
+.title {
+  font-size: 54px;
+  color: #007bff;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #212529; /* Fixed typo */
+  border-radius: 12px;
+}
+
+.start {
+  display: block;
+  width: 33.33%;
+  font-size: 36px;
+  margin-left: 33.33%;
+  margin-top: 20%;
+  padding: 20px 40px;
+  cursor: pointer;
+  border: none;
+}
+
+.start:hover,
+.start:active {
+  background-color: #f8f9fa;
+  color: #28a745;
+  border: solid 1px #28a745;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.rules_container {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10%;
+  border: solid 1px #28a745;
+  border-radius: 12px;
+  padding: 10px 24px;
+}
+
+.rules {
+  font-size: 36px;
+  text-align: center;
+  color: #28a745;
+  padding: 10px 0;
+}
+
+.rules-list {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rule-list {
+  font-size: 24px;
+  color: #212529; /* Fixed typo */
+  list-style: decimal;
+}
+
+.proceed {
+  display: block;
+  text-align: center;
+  width: 33.33%;
+  font-size: 24px;
+  margin-left: 33.33%;
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.proceed:hover,
+.proceed:active {
+  background-color: #f8f9fa;
+  color: #28a745;
+  border: solid 1px #28a745;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: solid 1px #28a745;
+  border-radius: 12px;
+  margin-left: 33%;
+  margin-top: 10%;
+  padding: 20px 40px;
+  width: 33%;
+}
+
+.setting {
+  list-style-type: decimal;
+  text-align: left;
+}
+
+.setting,
+.setting select,
+.setting input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28px;
+}
+
+#begin {
+  display: block;
+  width: auto;
+  text-align: center;
+  font-size: 36px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+}
+
+#begin:hover,
+#begin:active {
+  background-color: #f8f9fa;
+  color: #28a745;
+  border: solid 1px #28a745;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
+}
+
+.scorecard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.round {
+  font-size: 48px;
+  color: #ffc107;
+}
+
+.board {
+  font-size: 48px;
+  color: #dc3545;
+  background-color: #ffc107;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+.score {
+  background-color: #28a745;
+  padding: 5px;
+  font-size: 32px;
+  border-radius: 8px;
+}
+
+.pick {
+  text-align: center;
+  color: #28a745;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.objects {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  text-align: center;
+  margin-left: 36%;
+}
+
+.object {
+  list-style: none;
+  font-size: 48px;
+  text-align: center;
+}
+
+#rock,
+#paper,
+#scissors {
+  font-size: 48px;
+  cursor: pointer;
+}
+
+.round-number-light {
+  color: #ffc107;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+body.dark-mode .title {
+  color: #ffc107;
+}
+
+body.dark-mode .btn,
+body.dark-mode #begin,
+body.dark-mode .start,
+body.dark-mode .proceed {
+  background-color: #28a745;
+  color: #f8f9fa;
+}
+
+body.dark-mode .scorecard,
+body.dark-mode .board {
+  background-color: #28a745;
+  color: #f8f9fa;
+}
+
+body.dark-mode .round {
+  color: #ffc107;
+}
+
+body.dark-mode .score {
+  background-color: #f8f9fa;
+  color: #28a745;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Result</title>
+  </head>
+  <body>
+    <h1>Game Over</h1>
+    <p id="winner"></p>
+
+    <script>
+      // Get the URL parameter for the winner
+      const urlParams = new URLSearchParams(window.location.search);
+      const winner = urlParams.get("winner");
+
+      if (winner) {
+        document.getElementById("winner").textContent = `${winner} Wins!`;
+      } else {
+        document.getElementById("winner").textContent = "No winner.";
+      }
+    </script>
+  </body>
+</html>
